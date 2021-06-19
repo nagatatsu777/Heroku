@@ -65,6 +65,14 @@ app.delete('/api/notes/:id', (request, response) => {
 
   response.status(204).end()
 })
+app.put('/api/notes',(request,response)=>{
+  const personObject = {
+    name: request.params.name,
+    number: request.params.number,
+    id:request.params.id
+  }
+  notes.concat(personObject)
+})
 app.post('/api/notes', (request, response) => {
   const body = request.body
 
