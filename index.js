@@ -87,11 +87,16 @@ app.post('/api/notes', (request, response) => {
       : 0
     return maxId + 1
   }
-  const note = {
+  /*const note = {
     content: body.content,
     important: body.important || false,
     date: new Date(),
     id: generateId(),
+  }*/
+  const note = {
+    name: body.name,
+    number: body.number,
+    id: generateId()
   }
 
   notes = notes.concat(note)
