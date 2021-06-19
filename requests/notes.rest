@@ -1,9 +1,10 @@
 DELETE http://localhost:3001/api/notes/1
 ###
-POST http://localhost:3001/api/notes
+POST https://infinite-earth-35390.herokuapp.com/api/notes
 Content-Type: application/json
 
 {
-    "content":"VS Code REST Client",
-    "important":false
+    "name": "wesar",
+    "number":12341,
+    "id": 10
 }

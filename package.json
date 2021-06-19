@@ -13,7 +13,11 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "\"YAY\""
+    "test": "\"YAY\"",
+    "build:ui": "rm -rf build && cd /Users/Lan/part2/ && npm run build --prod && cp -r build /Users/Lan/Desktop/app",
+    "deploy": "git push heroku master",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",    
+    "logs:prod": "heroku logs --tail"
   },
   "author": "",
   "license": "ISC"
