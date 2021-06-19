@@ -1,8 +1,11 @@
 const express = require('express')
+const cors = require('cors')
+//link: https://infinite-earth-35390.herokuapp.com
 const app = express()
 app.use(express.json())
+app.use(cors())
 let notes = [
-  {
+  /*{
     id: 1,
     content: "HTML is easy",
     date: "2019-05-30T17:30:31.098Z",
@@ -19,7 +22,24 @@ let notes = [
     content: "GET and POST are the most important methods of HTTP protocol",
     date: "2019-05-30T19:20:14.298Z",
     important: true
-  }
+  }*/
+ 
+    {
+      "name": "asd",
+      "number": "1234",
+      "id": 6
+    },
+    {
+      "name": "qwe",
+      "number": "1245",
+      "id": 2
+    },
+    {
+      "name": "",
+      "number": "",
+      "id": 3
+    }
+  
 ]
 app.get('/', (request, response) => {
   response.send('<h1>Hello Wor!</h1>')
