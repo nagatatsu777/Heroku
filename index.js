@@ -67,7 +67,7 @@ app.delete('/api/notes/:id', (request, response) => {
 })
 app.post('/api/notes', (request, response) => {
   console.log(request)
-  if (!body.content) {
+  if (!request.name) {
     return response.status(400).json({ 
       error: 'content missing' 
     })
@@ -85,9 +85,9 @@ app.post('/api/notes', (request, response) => {
     id: generateId(),
   }*/
   const note = {
-    name: body.name,
-    number: body.number,
-    id: generateId()
+    name: request.name,
+    number: request.number,
+    id: request.id
   }
 
   notes = notes.concat(note)
